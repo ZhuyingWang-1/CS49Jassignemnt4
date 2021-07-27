@@ -6,11 +6,9 @@ import java.util.*;
 
 
 public class MyCollections {
-    public static void printFiles(List<File> files) throws FileNotFoundException {
-        ListIterator<File> iterator = files.listIterator();
-
-        while(iterator.hasNext()){
-            File file=iterator.next();
+    public static void printFiles(PriorityQueue<File> files) throws FileNotFoundException {
+        while(!files.isEmpty()){
+            File file=files.poll();
             Scanner reader = new Scanner(file);// print all lines in the file
             String line;
             while(reader.hasNextLine()) {
@@ -19,13 +17,12 @@ public class MyCollections {
             }
             // close the scanner object after doner
             reader.close();
-            iterator.remove();
             System.out.println("***");
         }
     }
 
 
-    public static void downsize(List<String> employees, int num){
+    public static void downsize(LinkedList<String> employees, int num){
         ListIterator<String> iterator = employees.listIterator();
         int count=1;
         while(iterator.hasNext()){

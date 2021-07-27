@@ -3,15 +3,13 @@ package edu.sjsu.assignment4;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        List<File> files=new ArrayList<>();
+        PriorityQueue<File> files=new PriorityQueue<>();
         File file1= new File("src/edu/sjsu/assignment4/File1.txt");
         File file2= new File("src/edu/sjsu/assignment4/File2.txt");
         files.add(file1);
