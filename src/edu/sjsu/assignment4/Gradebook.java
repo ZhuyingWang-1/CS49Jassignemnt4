@@ -1,16 +1,13 @@
 package edu.sjsu.assignment4;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Gradebook {
 
-    private TreeMap<Student,Character> map=new TreeMap<>();
+    private static TreeMap<Student,Character> map=new TreeMap<>();
     public Gradebook() {
     }
-    public boolean addStudent(int id, String name, char grade){
+    public static boolean addStudent(int id, String name, char grade){
         Student student=new Student(id,name);
         if(map.containsKey(student)){
             return false;
@@ -24,7 +21,7 @@ public class Gradebook {
             return true;
         }
     }
-    public boolean addStudent(int id, String name){
+    public static boolean addStudent(int id, String name){
         return addStudent(id,name,'N');
     }
     public boolean deleteStudent(int id){
@@ -35,7 +32,7 @@ public class Gradebook {
         }
         return false;
     }
-    public boolean updateGrade(int id, char newGrade){
+    public static boolean updateGrade(int id, char newGrade){
         Student student=new Student(id);
         if(newGrade!='A'&&newGrade!='B'&&newGrade!='C'&&newGrade!='D'&&newGrade!='F') {
             return false;
