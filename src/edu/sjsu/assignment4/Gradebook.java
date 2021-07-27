@@ -2,7 +2,7 @@ package edu.sjsu.assignment4;
 
 import java.util.*;
 
-public class Gradebook {
+public class Gradebook{
 
     private static TreeMap<Student,Character> map=new TreeMap<>();
     public  Gradebook() {

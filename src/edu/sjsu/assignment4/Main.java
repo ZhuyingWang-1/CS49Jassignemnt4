@@ -8,7 +8,6 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-
       /*
         PriorityQueue<File> files=new PriorityQueue<>();
         File file1= new File("src/edu/sjsu/assignment4/File1.txt");
@@ -19,7 +18,7 @@ public class Main {
         MyCollections.printFiles(files);
         */
 
-        /*
+
         AppointmentManager appointmentManager=new AppointmentManager();
         boolean flag=true;
         while(flag){
@@ -117,7 +116,6 @@ public class Main {
             }
         }
         System.out.println("Program exited");
-*/
 
     }
 
