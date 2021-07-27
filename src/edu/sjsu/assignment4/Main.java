@@ -9,6 +9,9 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        System.out.println(MyCollections.isBalanced("948(e^&2)[0k[2g]4q]"));
+
+        /*
         PriorityQueue<File> files=new PriorityQueue<>();
         File file1= new File("src/edu/sjsu/assignment4/File1.txt");
         File file2= new File("src/edu/sjsu/assignment4/File2.txt");

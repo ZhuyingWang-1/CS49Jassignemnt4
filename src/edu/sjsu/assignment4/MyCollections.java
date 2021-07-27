@@ -37,8 +37,9 @@ public class MyCollections {
 
     public static boolean isBalanced(String s){
         if(s.length()==0||s==null) return true;
-        Stack<Character> stack=new Stack<Character>();
+        Stack<Character> stack=new Stack<>();
         for(Character c:s.toCharArray()){
+            if(c!=']'&&c!=')'&&c!='}'&&c!='('&&c!='{'&&c!='[') continue;
             if(stack.isEmpty()&&(c==']'||c=='}'||c==')')){
                 return false;
             }

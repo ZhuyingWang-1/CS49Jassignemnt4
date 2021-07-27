@@ -10,7 +10,7 @@ public class Student implements Comparator<Student> {
 
     public Student(int id){
         this.id=id;
-        name="unnamed";
+        name="Unnamed";
     }
     public Student(int id,String name){
         this.id=id;
