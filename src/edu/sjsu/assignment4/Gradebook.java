@@ -5,7 +5,7 @@ import java.util.*;
 public class Gradebook {
 
     private static TreeMap<Student,Character> map=new TreeMap<>();
-    public Gradebook() {
+    public  Gradebook() {
     }
     public static boolean addStudent(int id, String name, char grade){
         Student student=new Student(id,name);
@@ -24,7 +24,7 @@ public class Gradebook {
     public static boolean addStudent(int id, String name){
         return addStudent(id,name,'N');
     }
-    public boolean deleteStudent(int id){
+    public static boolean deleteStudent(int id){
         Student student=new Student(id);
         if(map.containsKey(student)){
             map.remove(student);
@@ -43,7 +43,7 @@ public class Gradebook {
         }
         return false;
     }
-    public void printGrade(Comparator<Student> comparator){
+    public static void printGrade(Comparator<Student> comparator){
         Collections.sort(map.keySet().stream().toList(), comparator);
         for(Student student:map.keySet()){
             System.out.println(student.getId()+'.'+student.getName()+':'+' '+map.get(student));
