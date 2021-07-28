@@ -49,7 +49,7 @@ public class Gradebook {
        // Collections.sort(map.keySet().stream().toList(), comparator);
         //Collections.sort(map.keySet(),new comparator);
         for(Student student:students){
-            System.out.println(student.getId()+'.'+student.getName()+':'+' '+map.get(student));
+            System.out.println(student.getId()+"."+student.getName()+": "+map.get(student));
         }
     }
 
