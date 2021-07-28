@@ -11,6 +11,12 @@ public abstract class Appointment implements Comparable<Appointment>{
     private LocalDate startDate;
     private LocalDate endDate;
 
+    public Appointment(String description) {
+        this.description = description;
+        startDate=LocalDate.MIN;
+        endDate=LocalDate.MIN;
+    }
+
     public Appointment(String description, LocalDate startDate, LocalDate endDate) {
         this.description = description;
         this.startDate = startDate;

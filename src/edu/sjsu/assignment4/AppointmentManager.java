@@ -1,5 +1,6 @@
 package edu.sjsu.assignment4;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,11 +14,13 @@ public class AppointmentManager {
     }
 
     public static void deleteApp(String des){
-        for(Appointment app:set){
-            if(app.getDescription().equals(des)){
-                set.remove(app);
+        Appointment app=new Appointment(des) {
+            @Override
+            public boolean occursOn(LocalDate date) {
+                return false;
             }
-        }
+        };
+        set.remove(app);
     }
 
     public static Set<Appointment> getSet() {
