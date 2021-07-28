@@ -18,6 +18,12 @@ public class Main {
         MyCollections.printFiles(files);
         */
 
+        Gradebook.printGrade(new Comparator<Student>(){
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getId()-o2.getId();
+            }
+        });
 
         AppointmentManager appointmentManager=new AppointmentManager();
         boolean flag=true;

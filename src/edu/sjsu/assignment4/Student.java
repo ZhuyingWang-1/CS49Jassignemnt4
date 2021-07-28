@@ -6,7 +6,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 
-public class Student {
+public class Student implements Comparable <Student> {
+
 
     private  int  id;
     private  String name;
@@ -44,6 +45,10 @@ public class Student {
         return Objects.hash(getId(), getName());
     }
 
+    @Override
+    public int compareTo(Student o) {
+        return this.getId()-o.getId();
+    }
 }
 
 

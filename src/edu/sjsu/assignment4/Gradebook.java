@@ -2,7 +2,7 @@ package edu.sjsu.assignment4;
 
 import java.util.*;
 
-public class Gradebook{
+public class Gradebook {
 
     private static TreeMap<Student,Character> map=new TreeMap<>();
     public  Gradebook() {
@@ -44,11 +44,13 @@ public class Gradebook{
         return false;
     }
     public static void printGrade(Comparator<Student> comparator){
-        Collections.sort(map.keySet().stream().toList(), comparator);
-        for(Student student:map.keySet()){
+        TreeSet<Student> students=new TreeSet<>(comparator);
+        students.addAll(map.keySet());
+       // Collections.sort(map.keySet().stream().toList(), comparator);
+        //Collections.sort(map.keySet(),new comparator);
+        for(Student student:students){
             System.out.println(student.getId()+'.'+student.getName()+':'+' '+map.get(student));
         }
     }
-
 
 }
