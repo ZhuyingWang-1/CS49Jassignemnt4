@@ -42,7 +42,7 @@ public class Student implements Comparable <Student> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName());
+        return Objects.hash(getId());
     }
 
     @Override
